@@ -1,0 +1,30 @@
+
+<table>
+  <!-- Table header -->
+<!--   <tr>
+    <% for (var k in header) { %>
+      <th><%= header[k] %></th>
+    <% } %>
+  </tr> -->
+  <!-- End table header -->
+
+  <tr class="month-total">
+    <td >Total</td>
+    <td class="income"><%= monthEntries.total.debit.toFixed(2) %></td>
+    <td class="spending"><%= monthEntries.total.credit.toFixed(2) %></td>
+  </tr>
+
+  <!-- Table rows -->
+  <% if (typeof monthEntries != 'undefined') { %>
+    <% for(var dayNo in monthEntries) { %>
+      <% if (dayNo != 'total') { %>
+          <% date = monthEntries[dayNo].transactions[0].date %>
+          <% dayTransactions = monthEntries[dayNo].transactions %>
+          <% dayTotal = monthEntries[dayNo].total %>
+          <% include row.ejs %>
+      <% } %>
+    <% } %>
+  <% } %>
+  <!-- End table rows -->
+
+</table>

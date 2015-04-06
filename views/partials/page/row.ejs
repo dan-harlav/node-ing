@@ -1,0 +1,25 @@
+<tr class="date_expander">
+  <td class="date_details"><%= date %></td>
+  <td class="spending daily_value "><%= dayTotal.debit.toFixed(2) %></td>
+  <td class="income daily_value  empty "><%= dayTotal.credit.toFixed(2) %></td>
+</tr>
+<tr class="ss">
+<td colspan="3">
+<ul class="daily_transaction_row">
+  <% for(s=0; s < dayTransactions.length; s++) { var transaction = dayTransactions[s]; %>
+
+            <li>
+              <div class="value"><%- (typeof transaction['details'] != 'undefined') ? transaction['details']: ''; %></div>
+              <% if (typeof transaction.debit != 'undefined' && transaction.debit > 0) { %>
+                <div class="key spending"><%= transaction.debit %></div>
+              <% } %>
+              <% if (typeof transaction.credit != 'undefined' && transaction.credit > 0) { %>
+                <div class="key income "><%= transaction.credit %></div>
+              <% } %>
+            </li>
+
+  <% } %>
+  </ul>
+</td>
+</tr>
+<tr class="expander"><td></td><td></td></tr>

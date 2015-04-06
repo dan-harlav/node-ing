@@ -1,0 +1,89 @@
+body {
+  font-family: Courier;
+  color: grey;
+}
+
+table {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+table .date_details {
+  width: 80%;
+}
+
+table .date_expander {
+  cursor: pointer;
+}
+
+table .date_expander td {
+  color: white;
+  background-color: grey;
+  padding: 6px;
+}
+
+table .daily_transaction_row {
+  display: none;
+}
+
+table .daily_transaction_row td {
+  border: grey thin solid;
+  padding: 4px;
+}
+
+table .daily_transaction_row span {
+  font-size: 12px;
+}
+
+.income {
+  color: green;
+}
+
+.spending {
+  color: red;
+}
+
+.spending.daily_value {
+  border-top: red 3px solid;
+}
+.income.daily_value {
+  border-top: green 3px solid;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin-top: 2px;
+}
+
+li {
+  float: left;
+  width: 100%;
+  border: grey thin solid;
+  margin-top: -1px;
+  font-size: 12px;
+}
+
+div.value, div.key {
+  display: inline;
+  padding: 5px;
+}
+
+div.value {
+  float: left;
+  max-width: 88%;
+  /*border-right: 1px grey solid;*/
+}
+div.key {
+  float: right;
+  text-align: center;
+  /*border-left: 1px grey solid;*/
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.month-total {
+
+}

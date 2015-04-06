@@ -1,0 +1,6 @@
+<tr>
+  <% for(var varName in rowContent) { %>
+  <% if (typeof rowContent[varName] == 'string') { %>
+    <td style="border: black thin solid;"><%= rowContent[varName] %></td>
+  <% }} %>
+</tr>
